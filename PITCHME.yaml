@@ -1,0 +1,3 @@
+theme : black//主题
+autoslide : 5500//自动几毫秒后滑动
+mousewheel : true//可以滚轮控制
