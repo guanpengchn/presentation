@@ -1,4 +1,4 @@
-theme : sky
+theme : black
 autoslide : 5500
 mousewheel : true
 theme-override : PITCHME.css
