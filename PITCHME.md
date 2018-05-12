@@ -9,7 +9,7 @@
 	- 中跃来做开发者？
 - 数据库服务（原来使用ThinkPHP开发）：
 	- 以Restful API的形式供前台服务调用
-	- 可选方案：`Java`,`Python`,`Node.js`,`Golang`,`PHP`
+	- 可选方案：`Java`，`Python`，`Node.js`，`Golang`，`PHP`
 
 ---
 
