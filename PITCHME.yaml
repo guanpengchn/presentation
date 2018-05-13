@@ -1,3 +1,4 @@
 theme : black
 mousewheel : true
 theme-override : PITCHME.css
+layout: top-left
