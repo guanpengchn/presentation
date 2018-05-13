@@ -5,3 +5,6 @@ ul{
 .reveal ul ul{
   list-style-type: circle;
 }
+.reveal{
+  text-transform: none;
+}
