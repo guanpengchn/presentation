@@ -4,14 +4,12 @@
 
 ### 开发目标
 
-@ol
 - 前台服务（原来使用AngularJS开发）：
 	- 由于需要兼容ie8，建议使用jQuery搭配Node.js来做服务
 	- 中跃来做开发者？
 - 数据库服务（原来使用ThinkPHP开发）：
 	- 以Restful API的形式供前台服务调用
 	- 可选方案：`Java`，`Python`，`Node.js`，`Golang`，`PHP`
-@olend
 
 ---
 
