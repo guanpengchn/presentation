@@ -13,10 +13,10 @@ headFiles: /mine.css
 ## 开发目标
 
 - 前台服务：
-  - 原来使用AngularJS开发
+	- 原来使用AngularJS开发
 	- 由于需要兼容ie8，建议使用jQuery搭配Node.js来做服务
 - 数据库服务：
-  - 原来使用ThinkPHP开发
+	- 原来使用ThinkPHP开发
 	- 以Restful API的形式供前台服务调用
 	- 可选方案：`Java`，`Python`，`Node.js`，`Golang`，`PHP`
 
@@ -29,7 +29,7 @@ headFiles: /mine.css
 ## 技术选型为Node.js
 
 - 前端开发生态与解决方案丰富
-- 可用 Express + grunt
+- 可用 Express + glup + npm
 
 [slide]
 
@@ -106,6 +106,12 @@ headFiles: /mine.css
 [slide]
 
 # 现阶段最优方案为Java
+
+[slide]
+
+## 整体架构图
+
+![](/arc.png)
 
 [slide]
 
