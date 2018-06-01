@@ -6,17 +6,18 @@ headFiles: /mine.css
 
 [slide]
 
-# DRG后台开发选型调研
+# DRG数据管理前台开发选型调研
+## 关鹏
 
 [slide]
 
 ## 开发目标
 
 - 前台服务：
-	- 原来使用AngularJS开发
-	- 由于需要兼容ie8，建议使用jQuery搭配Node.js来做服务
+	- 原来使用AngularJS开发，管理系统，痛点在于兼容性和包管理机制
+	- 由于需要兼容ie8，建议使用jQuery 1.9或者AngularJS 1.2搭配Node.js来做服务
 - 数据库服务：
-	- 原来使用ThinkPHP开发
+	- 原来使用ThinkPHP开发，痛点在于部署和包管理机制
 	- 以Restful API的形式供前台服务调用
 	- 可选方案：`Java`，`Python`，`Node.js`，`Golang`，`PHP`
 
@@ -29,7 +30,8 @@ headFiles: /mine.css
 ## 技术选型为Node.js
 
 - 前端开发生态与解决方案丰富
-- 可用 Express + glup + npm
+- 流式打包，全站热更新，兼容性强
+- 已实现 Express + gulp + npm 脚手架
 
 [slide]
 
@@ -122,3 +124,9 @@ headFiles: /mine.css
 - 持续集成：Jenkins
 - 代码打包：Maven
 - 容器部署：Docker
+
+[slide]
+
+## 下一步工作
+
+- 数据库服务建立，对接数据平台
