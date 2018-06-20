@@ -14,3 +14,6 @@ ul ul{
 h1,h2,h3{
     text-shadow:2px 2px 2px #000 !important;
 }
+strong{
+    color: rgb(0, 103, 187) !important;
+}
