@@ -2,7 +2,7 @@ title: The Raft Consensus Algorithm
 speaker: 关鹏
 theme: light
 transition: slide2
-headFiles: /mine.css
+headFiles: /assets/style.css
 
 [slide]
 
@@ -28,7 +28,7 @@ headFiles: /mine.css
 
 ## Raft User Study
 
-![](/1.png)
+![](/assets/3-1.png)
 
 [slide]
 
