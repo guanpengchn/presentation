@@ -11,20 +11,23 @@
 - [前端生态简介](https://guanpengchn.github.io/presentation/frontend-intro.html)
 - [Raft协议介绍](https://guanpengchn.github.io/presentation/Raft.html)
 - [golang调用python](https://guanpengchn.github.io/presentation/golang-python.html)
+- [大型网站系统与JAVA中间件实践](https://guanpengchn.github.io/presentation/java-system-middleware.html)
 
 ## 本地运行
 
 ```
 $ npm install -g noteppt
-$ cd src
-$ noteppt start -w
+$ npm install
+// 启动运行
+$ npm run dev
+// 调试刷新
+$ npm run watch
 ```
 
 ## 生成部署
 
 ```
-$ npm install
-$ gulp
+$ npm run deploy
 ```
 
 ## 其他
