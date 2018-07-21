@@ -1,12 +1,13 @@
 ## 概况
 
-- 自己的presentation，题目[在线预览](https://guanpengchn.github.io/presentation/)
+- 自己的presentation，题目[在线预览](https://github.com/guanpengchn/presentation/tree/master#%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88)
 - 使用[nodeppt](https://github.com/ksky521/nodeppt)制作
 - 可用主题 colors，moon，blue，dark，green，light
 
 ## 在线预览
 
 - [题目列表](https://guanpengchn.github.io/presentation/)
+
     - [前端生态简介](https://guanpengchn.github.io/presentation/frontend-intro.html)
     - [Raft协议介绍](https://guanpengchn.github.io/presentation/Raft.html)
     - [golang调用python](https://guanpengchn.github.io/presentation/golang-python.html)
