@@ -1,0 +1,22 @@
+ul li ul li:before{
+    content: "";
+}
+ul li ul{
+    list-style-type:circle;
+}
+ul li ul li{
+    margin-bottom: 0px;
+    font-size:22px;
+}
+ul ul{
+    margin-top: 0px;
+}
+h1,h2,h3{
+    text-shadow:2px 2px 2px #000 !important;
+}
+strong{
+    color: rgb(0, 103, 187) !important;
+}
+slides>slide, .magic>.magicItem{
+    color:black;
+}
