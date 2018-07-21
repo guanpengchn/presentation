@@ -1,0 +1,266 @@
+<!--
+    Powered By nodeppt - This is probably the best web presentation tool so far!
+    version: 1.4.5
+    site: https://github.com/ksky521/nodeppt
+    date: 
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DRG后台开发选型调研 - By 关鹏</title>
+    <link rel="stylesheet" media="all" href="./css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="./css/phone.css">
+    
+    <link rel="stylesheet" href="./js/highlight/styles/monokai_sublime.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./assets/style.css">
+<link rel="stylesheet" href="./css/theme.light.css">
+</head>
+<body>
+<div class="slides">
+    <slides id="container">
+        <slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>DRG数据管理前台开发选型调研</h1>
+<h2>关鹏</h2>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>开发目标</h2>
+<ul>
+<li>前台服务：<ul>
+<li>原来使用AngularJS开发，管理系统，痛点在于兼容性和包管理机制</li>
+<li>由于需要兼容ie8，建议使用jQuery 1.9或者AngularJS 1.2搭配Node.js来做服务</li>
+</ul>
+</li>
+<li>数据库服务：<ul>
+<li>原来使用ThinkPHP开发，痛点在于部署和包管理机制</li>
+<li>以Restful API的形式供前台服务调用</li>
+<li>可选方案：<code>Java</code>，<code>Python</code>，<code>Node.js</code>，<code>Golang</code>，<code>PHP</code></li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>前台服务</h1>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>技术选型为Node.js</h2>
+<ul>
+<li>前端开发生态与解决方案丰富</li>
+<li>流式打包，全站热更新，兼容性强</li>
+<li>已实现 Express + gulp + npm 脚手架</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>数据库服务</h1>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>技术选型之Java</h2>
+<ul>
+<li>优点：<ul>
+<li>静态语言，适合大型企业与多人协作开发，生态与解决方案丰富，可扩展性强</li>
+<li>团队整体熟悉</li>
+<li>并库驱动Java版本更新及时</li>
+<li>包管理器Maven使用方便</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>前期开发速度相对缓慢</li>
+</ul>
+</li>
+<li>可用方案：<ul>
+<li>Spring + Maven + 并库驱动</li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>技术选型之Python</h2>
+<ul>
+<li>优点：<ul>
+<li>语法糖丰富，适合现阶段做敏捷开发</li>
+<li>团队整体熟悉</li>
+<li>包管理器pip使用方便</li>
+<li>胶水语言，对接Spark等数据分析业务障碍小</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>并库驱动Python版本落后于Java版本</li>
+<li>动态语言，大型工程不可控性增强</li>
+</ul>
+</li>
+<li>可用方案：<ul>
+<li>Flask/Django</li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>技术选型之Node.js</h2>
+<ul>
+<li>优点：<ul>
+<li>可引入TypeScript做静态语言</li>
+<li>异步处理方便，符合当前数据库服务IO密集的特点，解决方案丰富</li>
+<li>包管理器npm使用方便</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>暂无并库驱动，需要对并库进行封装才可使用</li>
+</ul>
+</li>
+<li>可用方案：<ul>
+<li>Koa/Express</li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>技术选型之Golang</h2>
+<ul>
+<li>优点：<ul>
+<li>静态语言，容易做并发开发</li>
+<li>部署简单</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>暂无并库驱动，需要对并库进行封装才可使用</li>
+<li>生态与解决方案相对一般，比如包管理器不够完善</li>
+</ul>
+</li>
+<li>可用方案：<ul>
+<li>Golang可不使用框架直接做http服务</li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>技术选型之PHP</h2>
+<ul>
+<li>优点：<ul>
+<li>适合现阶段做敏捷开发</li>
+<li>容易学习，上手速度快</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>暂无并库驱动，需要对并库进行封装才可使用</li>
+<li>动态语言，大型工程不可控性增强</li>
+</ul>
+</li>
+<li>可用方案：<ul>
+<li>Laravel</li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>现阶段最优方案为Java</h1>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>整体架构图</h2>
+<img src="./assets/1-arc.png" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>DevOps解决方案</h2>
+<ul>
+<li>旨在提倡开发(Dev)和运维(Ops)在软件构建、集成、测试、发布到部署中自动化</li>
+<li>协作开发：Git/Gitlab</li>
+<li>持续集成：Jenkins</li>
+<li>代码打包：Maven</li>
+<li>容器部署：Docker</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>下一步工作</h2>
+<ul>
+<li>数据库服务建立，对接数据平台</li>
+</ul>
+
+</article></section></slide>
+        
+
+        <!-- <slide class="slide logoslide dark nobackground">
+            <article class="flexbox vcenter">
+                <h2 style="color: white;">Powered By nodeppt v1.4.5</h2>
+            </article>
+        </slide> -->
+        <div class="slideTip" id="tip"></div>
+    </slides>
+</div>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<div id="_buttons">
+    <div class="_btn-box" id="_btn-box" style="display:none;">
+        <button class="fa fa-arrow-circle-left" id="_btn-prev"></button>
+        <button class="fa fa-arrow-circle-right" id="_btn-next"></button>
+        <button class="fa fa-paint-brush" id="_btn-brush"></button>
+        <button class="fa fa-compress" id="_btn-overview" data-toggle="fa fa-expand"></button>
+    </div>
+    <button class="fa fa-bars" id="_btn-bar"  data-toggle="fa fa-close"></button>
+</div>
+<script src="./js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+    var ASSET_RELATIVE_DIR = ".";
+</script>
+<script>
+var base = location.protocol + '//' + location.host;
+
+var path = (location.pathname + '#').split('/').filter(function(v){
+    return !!v;
+});
+path.pop();
+path = path.join('/');
+if (typeof ASSET_RELATIVE_DIR === 'string') {
+    path = path + '/' + ASSET_RELATIVE_DIR;
+}
+MixJS.config({
+    baseURL: [ base, path, 'js'].join('/')+'/'
+});
+
+</script>
+<script src="./js/mixjs/lib/event/broadcast.js"></script>
+<script src="./js/nodeppt.js"></script>
+<script>
+Slide.init({
+    containerID: 'container',
+    drawBoardID: 'drawBoard',
+    slideClass: '.slide',
+    buildClass: '.build',
+    progressID: 'progress',
+    transition: 'slide2',
+    width: 1100,
+    dir: './',
+    
+    //打开下面的注释就开启postMessage方式
+    //访问网址127.0.0.1:8080/ppt/demo#client
+    control:{
+        type: 'postMessage',
+        args:{
+            isControl:  false
+        }
+    },
+    
+    tipID: 'tip'
+});
+MixJS.loadJS('highlight/highlight.pack.js',function(){
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
+});
+</script>
+
+
+<!--placeholder-->
+</body>
+</html>
