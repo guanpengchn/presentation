@@ -28,7 +28,7 @@ headFiles: /assets/style.css
 
 ## Raft User Study
 
-![](/assets/3-1.png)
+![](/assets/Raft/3-1.png)
 
 [slide]
 

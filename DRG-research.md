@@ -113,7 +113,7 @@ headFiles: /assets/style.css
 
 ## 整体架构图
 
-![](/assets/1-arc.png)
+![](/assets/DRG-research/1-arc.png)
 
 [slide]
 

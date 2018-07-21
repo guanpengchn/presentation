@@ -13,7 +13,7 @@ headFiles: /assets/style.css
 
 ## 前端工程师必备技能图
 
-![](/assets/2-1.png)
+![](/assets/frontend-intro/2-1.png)
 
 [slide]
 
@@ -31,7 +31,7 @@ headFiles: /assets/style.css
 
 -----
 
-![](/assets/2-2.jpg)
+![](/assets/frontend-intro/2-2.jpg)
 
 ====
 
@@ -73,7 +73,7 @@ body
 
 ## scss和css
 
-![](/assets/2-8.png)
+![](/assets/frontend-intro/2-8.png)
 
 ====
 
@@ -91,7 +91,7 @@ body
 - Node.js于2009年写成，基于Google的V8
 - 本质都是在补坑
 
-<img src="/assets/2-3.jpg" height="300"/>
+<img src="/assets/frontend-intro/2-3.jpg" height="300"/>
 
 [slide style="background-color:black;"]
 
@@ -118,7 +118,7 @@ body
 
 ## vscode
 
-![](/assets/2-7.jpg)
+![](/assets/frontend-intro/2-7.jpg)
 
 ====
 
@@ -182,8 +182,8 @@ body
 
 ## PWA示例
 
-![](/assets/2-4.png)
-![](/assets/2-5.png)
+![](/assets/frontend-intro/2-4.png)
+![](/assets/frontend-intro/2-5.png)
 
 ====
 
@@ -241,7 +241,7 @@ body
 
 ## uglify和mincss
 
-![](/assets/2-9.png)
+![](/assets/frontend-intro/2-9.png)
 
 ====
 
