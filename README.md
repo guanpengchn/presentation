@@ -6,7 +6,7 @@
 
 ## 在线预览
 
-<div align="center"><a href="https://guanpengchn.github.io/presentation/" style="font-weight:bold;">题目列表</a></div>
+**[题目列表](https://guanpengchn.github.io/presentation/)**
 
 - [前端生态简介](https://guanpengchn.github.io/presentation/frontend-intro.html)
 - [Raft协议介绍](https://guanpengchn.github.io/presentation/Raft.html)
