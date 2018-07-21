@@ -17,3 +17,6 @@ h1,h2,h3{
 strong{
     color: rgb(0, 103, 187) !important;
 }
+slides>slide, .magic>.magicItem{
+    color:black;
+}

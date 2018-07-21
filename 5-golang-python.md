@@ -1,0 +1,23 @@
+title: golang调用python
+speaker: 关鹏
+theme: light
+transition: slide2
+headFiles: /assets/style.css
+
+[slide]
+
+# Golang调用Python方案制定
+## 关鹏
+
+[slide]
+
+## 解决方案
+
+- 方案一：使用[go-python](https://github.com/sbinet/go-python)
+- 方案二：做REST服务？
+
+[slide]
+
+## 方案一
+
+- [demo](http://forster.site/2017-09-14-golang%E8%B0%83%E7%94%A8python.html)
