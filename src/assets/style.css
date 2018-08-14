@@ -17,3 +17,13 @@ h1,h2,h3{
 strong{
     color: rgb(0, 103, 187) !important;
 }
+li ol{
+    margin: 0 0 0 2em;
+    font-size: 22px;
+}
+body{
+    font-family: Helvetica,Times,"YaHei Consolas Hybrid",STHeiti,"Microsoft Yahei",Arial,Helvetica,sans-serif;
+}
+code{
+    font-size:24px;
+}
