@@ -2,7 +2,7 @@ title: golang调用python
 speaker: 关鹏
 theme: light
 transition: slide2
-headFiles: /assets/style.css
+headFiles: /assets/light.css
 
 [slide]
 

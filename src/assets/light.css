@@ -22,8 +22,23 @@ li ol{
     font-size: 22px;
 }
 body{
-    font-family: Helvetica,Times,"YaHei Consolas Hybrid",STHeiti,"Microsoft Yahei",Arial,Helvetica,sans-serif;
+    font-family: Times,"YaHei Consolas Hybrid",STHeiti,"Microsoft Yahei",Arial,Helvetica,sans-serif;
 }
 code{
     font-size:24px;
+}
+.magic>.magicItem{
+    color:black;
+}
+table td{
+    padding: 8px;
+}
+table th{
+    padding: 8px;
+}
+table tr>td:first-child, table th{
+    font-weight: normal;
+}
+slides>slide .slide-wrapper em{
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.8);
 }

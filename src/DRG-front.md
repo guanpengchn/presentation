@@ -2,7 +2,7 @@ title: DRG前端方案制定
 speaker: 关鹏
 theme: colors
 transition: slide2
-headFiles: /assets/style.css
+headFiles: /assets/colors.css
 
 [slide]
 

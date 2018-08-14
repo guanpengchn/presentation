@@ -2,7 +2,7 @@ title: 前端生态简介
 speaker: 关鹏
 theme: colors
 transition: slide2
-headFiles: /assets/style.css
+headFiles: /assets/colors.css
 
 [slide]
 

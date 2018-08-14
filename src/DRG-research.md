@@ -2,7 +2,7 @@ title: DRG后台开发选型调研
 speaker: 关鹏
 theme: light
 transition: slide2
-headFiles: /assets/style.css
+headFiles: /assets/light.css
 
 [slide]
 
