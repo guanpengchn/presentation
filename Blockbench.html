@@ -1,0 +1,389 @@
+<!--
+    Powered By nodeppt - This is probably the best web presentation tool so far!
+    version: 1.4.5
+    site: https://github.com/ksky521/nodeppt
+    date: 
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blockbench Notes - By aaron guan</title>
+    <link rel="stylesheet" media="all" href="./css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="./css/phone.css">
+    
+    <link rel="stylesheet" href="./js/highlight/styles/monokai_sublime.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./assets/light.css">
+<link rel="stylesheet" href="./css/theme.light.css">
+</head>
+<body>
+<div class="slides">
+    <slides id="container">
+        <slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>Blockbench notes</h1>
+<h2>aaron guan</h2>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>CONTENTS</h2>
+<ol>
+<li>Abstract</li>
+<li>Introduction</li>
+<li>Private Blockchains</li>
+<li>Blockbench Design</li>
+<li>Performance Benchmark</li>
+<li>Discussion</li>
+</ol>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>ABSTRACT</h2>
+<ul>
+<li>Introduction of Blockchain</li>
+<li>Description of Blockbench</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>1. INTRODUCTION</h2>
+<ul>
+<li>Introduction of Bitcoin, Ethereum</li>
+<li><p>Three Challenges</p>
+<ol>
+<li>the <strong>Consensus Layer</strong>, <strong>Data Model</strong> and <strong>Execution Layer</strong></li>
+<li>based on <strong>Ethereum</strong>, <strong>Parity</strong> and <strong>Hyperledger</strong></li>
+<li>design and run <strong>Transaction</strong> and <strong>Analytics</strong> workloads</li>
+</ol>
+</li>
+<li><p>several dimensions: </p>
+<ol>
+<li><strong>Throughput</strong></li>
+<li><strong>Latency</strong></li>
+<li><strong>Scalability</strong></li>
+<li><strong>Fault Tolerance</strong></li>
+</ol>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>2. PRIVATE BLOCKCHAINS</h2>
+<ul>
+<li>Blockchain transactions: <strong>ACID</strong>, two-phase commit</li>
+<li>Bitcoin: <strong>PoW</strong>, miner, fork</li>
+<li>Ethereum: <strong>Turing complete state machines</strong>, EVM</li>
+<li>Private blockchain: <ul>
+<li>Distributed fault-tolerant consensus: <strong>Zab, Raft, Paxos, PBFT</strong></li>
+<li>Variants: <strong>Parity, Ripple, ErisDB</strong></li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>3. BLOCKBENCH DESIGN</h1>
+
+</article></section></slide>
+<slide class="slide"   data-on-build="Slide.magic" data-on-enter="Slide.magic.init"><section class="slide-wrapper"><div class="magic"><div class="magicItem current pagedown"  data-transition="zoomin"><article>
+<div class="magic-wrapper">
+<hgroup>
+<h2>3.1 Blockchain Layers</h2>
+
+</hgroup><article>
+
+<img src="./assets/Blockbench/Figure3.png" alt="">
+
+</article>
+</div>
+</article></div>
+<div class="magicItem next pagedown"  data-transition="zoomin"><article>
+<div class="magic-wrapper">
+<article>
+
+<ol>
+<li>Consensus: examples of consensus algorithms</li>
+<li>Data model: <strong>smart contract, Merkle tree, RPC</strong></li>
+<li>Execution layer: differences in <strong>programming languages and data types</strong></li>
+<li>Application layer: <strong>crypto-currency, Decentralized Autonomous Organization</strong></li>
+</ol>
+
+</article>
+</div>
+</article></div></div></section></slide>
+<slide class="slide"   data-on-build="Slide.magic" data-on-enter="Slide.magic.init"><section class="slide-wrapper"><div class="magic"><div class="magicItem current pagedown"  data-transition="zoomin"><article>
+<div class="magic-wrapper">
+<hgroup>
+<h2>3.2 BLOCKBENCH Implementation</h2>
+
+</hgroup><article>
+
+<img src="./assets/Blockbench/Figure4.png" alt="">
+
+</article>
+</div>
+</article></div>
+<div class="magicItem next pagedown"  data-transition="zoomin"><article>
+<div class="magic-wrapper">
+<article>
+
+<ul>
+<li>support: <ul>
+<li>Ethereum</li>
+<li>Parity</li>
+<li>Hyperledger</li>
+</ul>
+</li>
+<li><strong>IBlockchainConnector</strong>: <ul>
+<li>deploying application</li>
+<li>invoking</li>
+<li>querying the blockchain’s states</li>
+</ul>
+</li>
+<li><strong>IWorkloadConnector</strong>:<ul>
+<li>generate workload</li>
+</ul>
+</li>
+<li>Asynchronous Driver</li>
+</ul>
+
+</article>
+</div>
+</article></div></div></section></slide>
+<slide class="slide"   data-on-build="Slide.magic" data-on-enter="Slide.magic.init"><section class="slide-wrapper"><div class="magic"><div class="magicItem current pagedown"  data-transition="zoomin"><article>
+<div class="magic-wrapper">
+<hgroup>
+<h2>3.3 Evaluation Metrics</h2>
+
+</hgroup><article>
+
+<ol>
+<li><p><strong>Throughput</strong></p>
+<ul>
+<li>the <strong>number</strong> of successful transactions per second.</li>
+</ul>
+</li>
+<li><p><strong>Latency</strong></p>
+<ul>
+<li>the <strong>response time</strong> per transaction.</li>
+</ul>
+</li>
+<li><p><strong>Scalability</strong></p>
+<ul>
+<li>the <strong>changes</strong> in throughput and latency when increasing number of nodes and workloads.</li>
+</ul>
+</li>
+<li><p><strong>Fault tolerance</strong></p>
+<ul>
+<li>how the throughput and latency <strong>change</strong> during node failure.</li>
+<li><p><strong>three</strong> failure modes</p>
+<ol>
+<li>a node simply stops</li>
+<li>network delay</li>
+<li>random response</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+
+</article>
+</div>
+</article></div>
+<div class="magicItem next pagedown"  data-transition="zoomin"><article>
+<div class="magic-wrapper">
+<article>
+
+<ul>
+<li>Security metrics</li>
+</ul>
+
+</article>
+</div>
+</article></div></div></section></slide>
+<slide class="slide"   data-on-build="Slide.magic" data-on-enter="Slide.magic.init"><section class="slide-wrapper"><div class="magic"><div class="magicItem current pagedown"  data-transition="zoomin"><article>
+<div class="magic-wrapper">
+<article>
+
+<h2>3.4 Workloads</h2>
+<ul>
+<li>2 major categories:<ul>
+<li>macro benchmark</li>
+<li>micro benchmark</li>
+</ul>
+</li>
+</ul>
+
+</article>
+</div>
+</article></div>
+<div class="magicItem next pagedown"  data-transition="zoomin"><article>
+<div class="magic-wrapper">
+<article>
+
+<ul>
+<li>smart contracts for all workloads summarized below:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Smart contracts</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">YCSB</td>
+<td style="text-align:left">Key-value store</td>
+<td style="text-align:left">macro</td>
+</tr>
+<tr>
+<td style="text-align:left">Smallbank</td>
+<td style="text-align:left">OLTP workload</td>
+<td style="text-align:left">macro</td>
+</tr>
+<tr>
+<td style="text-align:left">EtherId</td>
+<td style="text-align:left">Name registrar contract</td>
+<td style="text-align:left">macro</td>
+</tr>
+<tr>
+<td style="text-align:left">Doubler</td>
+<td style="text-align:left">Ponzi scheme</td>
+<td style="text-align:left">macro</td>
+</tr>
+<tr>
+<td style="text-align:left">WavesPresale</td>
+<td style="text-align:left">Crowd sale</td>
+<td style="text-align:left">macro</td>
+</tr>
+<tr>
+<td style="text-align:left">VersionKVStore</td>
+<td style="text-align:left">Keep state’s versions (Hyperledger only)</td>
+<td style="text-align:left">micro</td>
+</tr>
+<tr>
+<td style="text-align:left">IOHeavy</td>
+<td style="text-align:left">Read and write a lot of data</td>
+<td style="text-align:left">micro</td>
+</tr>
+<tr>
+<td style="text-align:left">CPUHeavy</td>
+<td style="text-align:left">Sort a large array</td>
+<td style="text-align:left">micro</td>
+</tr>
+<tr>
+<td style="text-align:left">DoNothing</td>
+<td style="text-align:left">Simple contract, do nothing</td>
+<td style="text-align:left">micro</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+</div>
+</article></div></div></section></slide>
+<slide class="slide"   data-on-build="Slide.magic" data-on-enter="Slide.magic.init"><section class="slide-wrapper"><div class="magic"><div class="magicItem current pagedown"  data-transition="zoomin"><article class="flexbox vcenter">
+<div class="magic-wrapper">
+<article class="flexbox vcenter">
+
+<h1>4. PERFORMANCE BENCHMARK</h1>
+
+</article>
+</div>
+</article></div>
+<div class="magicItem next pagedown"  data-transition="zoomin"><article>
+<div class="magic-wrapper">
+<article>
+
+<ul>
+<li><em>Hyperledger</em> <strong>performs</strong> consistently <strong>better</strong> than <em>Ethereum</em> and <em>Parity</em> across the benchmarks. But it fails to scale up to more than 16 nodes.</li>
+<li><em>Ethereum</em> and <em>Parity</em> are <strong>more resilient to node failures</strong>, but they are vulnerable to security attacks that forks the blockchain.</li>
+<li>The <strong>main bottlenecks</strong> in <em>Hyperledger</em> and <em>Ethereum</em> are the <strong>consensus protocols</strong>, but for <em>Parity</em> the <strong>bottleneck</strong> is caused by <strong>transaction signing</strong>.</li>
+<li><em>Ethereum</em> and <em>Parity</em> incur <strong>large overhead</strong> in terms of <strong>memory and disk usage</strong>. Their <strong>execution engine</strong> is also <strong>less efficient</strong> than that of <em>Hyperledger</em>.</li>
+<li><em>Hyperledger</em>’s <strong>data model</strong> is <strong>low level</strong>, but its flexibility enables customized optimization for analytical queries of the blockchain data.</li>
+</ul>
+
+</article>
+</div>
+</article></div></div></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>4.1 Macro benchmarks</h2>
+
+</article></section></slide>
+        
+
+        <!-- <slide class="slide logoslide dark nobackground">
+            <article class="flexbox vcenter">
+                <h2 style="color: white;">Powered By nodeppt v1.4.5</h2>
+            </article>
+        </slide> -->
+        <div class="slideTip" id="tip"></div>
+    </slides>
+</div>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<div id="_buttons">
+    <div class="_btn-box" id="_btn-box" style="display:none;">
+        <button class="fa fa-arrow-circle-left" id="_btn-prev"></button>
+        <button class="fa fa-arrow-circle-right" id="_btn-next"></button>
+        <button class="fa fa-paint-brush" id="_btn-brush"></button>
+        <button class="fa fa-compress" id="_btn-overview" data-toggle="fa fa-expand"></button>
+    </div>
+    <button class="fa fa-bars" id="_btn-bar"  data-toggle="fa fa-close"></button>
+</div>
+<script src="./js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+    var ASSET_RELATIVE_DIR = ".";
+</script>
+<script>
+var base = location.protocol + '//' + location.host;
+
+var path = (location.pathname + '#').split('/').filter(function(v){
+    return !!v;
+});
+path.pop();
+path = path.join('/');
+if (typeof ASSET_RELATIVE_DIR === 'string') {
+    path = path + '/' + ASSET_RELATIVE_DIR;
+}
+MixJS.config({
+    baseURL: [ base, path, 'js'].join('/')+'/'
+});
+
+</script>
+<script src="./js/mixjs/lib/event/broadcast.js"></script>
+<script src="./js/nodeppt.js"></script>
+<script>
+Slide.init({
+    containerID: 'container',
+    drawBoardID: 'drawBoard',
+    slideClass: '.slide',
+    buildClass: '.build',
+    progressID: 'progress',
+    transition: 'slide2',
+    width: 1100,
+    dir: './',
+    
+    //打开下面的注释就开启postMessage方式
+    //访问网址127.0.0.1:8080/ppt/demo#client
+    control:{
+        type: 'postMessage',
+        args:{
+            isControl:  false
+        }
+    },
+    
+    tipID: 'tip'
+});
+MixJS.loadJS('highlight/highlight.pack.js',function(){
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
+});
+</script>
+
+
+<!--placeholder-->
+</body>
+</html>
