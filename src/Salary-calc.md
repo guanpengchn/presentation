@@ -80,7 +80,7 @@ headFiles: /assets/light.css
 
 ## 各阶段月薪情况
 
-![](/assets/Salary/1.jpg)
+![](/assets/Salary-calc/1.jpg)
 
 > 7385(实发工资) = <span style="color:#4387fd">10000(应发工资)</span> － <span style="color:red">2300(个人五险一金)</span> － <span style="color:#c700ff">315(个人所得税)</span>
 
