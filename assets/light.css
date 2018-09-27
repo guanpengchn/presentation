@@ -53,3 +53,6 @@ slides>slide .slide-wrapper blockquote{
 a{
     vertical-align: top;
 }
+slides>slide .slide-wrapper b, slides>slide .slide-wrapper strong{
+    margin: 0;
+}
