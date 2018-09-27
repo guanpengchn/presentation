@@ -12,7 +12,7 @@ ul ul{
     margin-top: 0px;
 }
 h1,h2,h3{
-    text-shadow:2px 2px 2px #000 !important;
+    text-shadow:0px 0px 1px #000 !important;
 }
 strong{
     color: rgb(0, 103, 187) !important;
@@ -41,4 +41,15 @@ table tr>td:first-child, table th{
 }
 slides>slide .slide-wrapper em{
     text-shadow: 0px 0px 0px rgba(0,0,0,0.8);
+}
+slides>slide .slide-wrapper blockquote::before{
+    content: "" !important;
+}
+slides>slide .slide-wrapper blockquote{
+    border-left:5px solid #3E87CF !important;
+    display: block;
+    background-color: #e9fff8 !important;
+}
+a{
+    vertical-align: top;
 }
