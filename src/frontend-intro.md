@@ -1,5 +1,5 @@
 title: 前端生态简介
-speaker: 关鹏
+speaker: aaron
 theme: colors
 transition: slide2
 headFiles: /assets/colors.css
@@ -7,7 +7,7 @@ headFiles: /assets/colors.css
 [slide]
 
 # 前端生态简介
-## 关鹏
+## aaron
 
 [slide]
 

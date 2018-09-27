@@ -1,5 +1,5 @@
 title: 工资与五险一金计算
-speaker: 关鹏
+speaker: aaron
 theme: light
 transition: slide2
 headFiles: /assets/light.css
@@ -7,7 +7,7 @@ headFiles: /assets/light.css
 [slide]
 
 # 工资与五险一金计算
-## 关鹏
+## aaron
 
 [slide]
 

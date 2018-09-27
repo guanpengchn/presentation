@@ -1,5 +1,5 @@
 title: The Raft Consensus Algorithm
-speaker: 关鹏
+speaker: aaron
 theme: light
 transition: slide2
 headFiles: /assets/light.css

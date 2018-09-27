@@ -1,5 +1,5 @@
 title: DRG前端方案制定
-speaker: 关鹏
+speaker: aaron
 theme: colors
 transition: slide2
 headFiles: /assets/colors.css
@@ -7,7 +7,7 @@ headFiles: /assets/colors.css
 [slide]
 
 # DRG前端方案制定
-## 关鹏
+## aaron
 
 [slide]
 

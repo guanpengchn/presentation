@@ -1,5 +1,5 @@
 title: golang调用python
-speaker: 关鹏
+speaker: aaron
 theme: light
 transition: slide2
 headFiles: /assets/light.css
@@ -7,7 +7,7 @@ headFiles: /assets/light.css
 [slide]
 
 # Golang调用Python方案制定
-## 关鹏
+## aaron
 
 [slide]
 

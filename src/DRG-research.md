@@ -1,5 +1,5 @@
 title: DRG后台开发选型调研
-speaker: 关鹏
+speaker: aaron
 theme: light
 transition: slide2
 headFiles: /assets/light.css
@@ -7,7 +7,7 @@ headFiles: /assets/light.css
 [slide]
 
 # DRG数据管理前台开发选型调研
-## 关鹏
+## aaron
 
 [slide]
 
