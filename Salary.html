@@ -1,0 +1,276 @@
+<!--
+    Powered By nodeppt - This is probably the best web presentation tool so far!
+    version: 1.4.5
+    site: https://github.com/ksky521/nodeppt
+    date: 
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>工资与五险一金计算 - By 关鹏</title>
+    <link rel="stylesheet" media="all" href="./css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="./css/phone.css">
+    
+    <link rel="stylesheet" href="./js/highlight/styles/monokai_sublime.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./assets/light.css">
+<link rel="stylesheet" href="./css/theme.light.css">
+</head>
+<body>
+<div class="slides">
+    <slides id="container">
+        <slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>工资与五险一金计算</h1>
+<h2>关鹏</h2>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>公式</h2>
+<ul>
+<li>核心公式<ul>
+<li>实发工资 = <span style="color:#4387fd">应发工资</span> － <span style="color:red">个人五险一金</span> － <span style="color:#c700ff">个人所得税</span></li>
+<li>个人资产 = 实发工资 + <span style="color:red">个人五险一金</span> + <span style="color:#ff7000">公司五险一金</span></li>
+</ul>
+</li>
+<li>解释<ul>
+<li><span style="color:#4387fd">应发工资</span> = 公司报价（比如20K/月，25K/月）</li>
+<li><span style="color:red">个人五险一金</span> = 个人按个人工资比例缴纳的保险</li>
+<li><span style="color:#ff7000">公司五险一金</span> = 公司按个人工资比例缴纳的保险</li>
+<li><span style="color:#c700ff">个人所得税</span> = <strong>(应发工资 － 个人五险一金)</strong>超过<strong>3500元</strong>后按比例缴纳的税收</li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>五险一金</h2>
+<ul>
+<li>不同城市五险一金缴费比例、最高缴费标准有差别，假设为以下比例<ul>
+<li><span style="color:red">个人缴费23%</span> = 养老8% + 医疗2% + 失业1% + 公积金12%</li>
+<li><span style="color:#ff7000">公司缴费43.5%</span> = 养老20% + 医疗8% + 失业 2% + 生育1% + 工伤0.5% + 公积金12%</li>
+</ul>
+</li>
+<li>举例计算：<ul>
+<li><span style="color:#4387fd">应发工资</span> = 10000</li>
+<li><span style="color:red">个人五险一金</span> = 10000 * 23% = 2300</li>
+<li><span style="color:#ff7000">公司五险一金</span> = 10000 * 43.5% = 4350</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>实发工资 = <span style="color:#4387fd">10000(应发工资)</span> － <span style="color:red">2300(个人五险一金)</span> － <span style="color:#c700ff">个人所得税</span></p>
+<p>个人资产 = 实发工资 + <span style="color:red">2300(个人五险一金)</span> + <span style="color:#ff7000">4350(公司五险一金)</span></p>
+</blockquote>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>个人所得税</h2>
+<p>税率表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">级数</th>
+<th style="text-align:left">应纳税所得额（含税）</th>
+<th style="text-align:left">应纳税所得额（不含税）</th>
+<th style="text-align:left">税率（%）</th>
+<th style="text-align:left">速算扣除数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">不超过1,500元的部分</td>
+<td style="text-align:left">不超过1,455元的部分</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">0</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">超过1,500元至4,500元的部分</td>
+<td style="text-align:left">超过1,455元至4,155元的部分</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">105</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">超过4,500元至9,000元的部分</td>
+<td style="text-align:left">超过4,155元至7,755元的部分</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">555</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">超过9,000元至35,000元的部分</td>
+<td style="text-align:left">超过7,755元至27,255元的部分</td>
+<td style="text-align:left">25</td>
+<td style="text-align:left">1,005</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">超过35,000元至55,000元的部分</td>
+<td style="text-align:left">超过27,255元至41,255元的部分</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">2,755</td>
+</tr>
+<tr>
+<td style="text-align:left">6</td>
+<td style="text-align:left">超过55,000元至80,000元的部分</td>
+<td style="text-align:left">超过41,255元至57,505元的部分</td>
+<td style="text-align:left">35</td>
+<td style="text-align:left">5,505</td>
+</tr>
+<tr>
+<td style="text-align:left">7</td>
+<td style="text-align:left">超过80,000元的部分</td>
+<td style="text-align:left">超过57,505的部分</td>
+<td style="text-align:left">45</td>
+<td style="text-align:left">13,505</td>
+</tr>
+</tbody>
+</table>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><hgroup>
+<h2>个人所得税计算</h2>
+<ul>
+<li>举例计算<ul>
+<li><span style="color:#4387fd">应发工资</span> = 10000</li>
+<li><span style="color:red">个人五险一金</span> = 10000 * 23% = 2300</li>
+<li>应纳税所得额 = (<span style="color:#4387fd">应发工资</span> － <span style="color:red">个人五险一金</span>) － 3500 = (10000 － 2300) － 3500 = 4200</li>
+<li><span style="color:#c700ff">个人所得税</span> = 应纳税所得额 × 税率 － 速算扣除数 = 4200 × 10% － 105 = 315（等同于分段计算，<a href="https://baike.baidu.com/item/%E9%80%9F%E7%AE%97%E6%89%A3%E9%99%A4%E6%95%B0" target="_blank">速算扣除数含义</a>）</li>
+</ul>
+</li>
+<li>所需税率表</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">级数</th>
+<th style="text-align:left">应纳税所得额（含税）</th>
+<th style="text-align:left">应纳税所得额（不含税）</th>
+<th style="text-align:left">税率（%）</th>
+<th style="text-align:left">速算扣除数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">超过1,500元至4,500元的部分</td>
+<td style="text-align:left">超过1,455元至4,155元的部分</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">105</td>
+</tr>
+</tbody>
+</table>
+
+</hgroup><article>
+
+<blockquote>
+<p>7385(实发工资) = <span style="color:#4387fd">10000(应发工资)</span> － <span style="color:red">2300(个人五险一金)</span> － <span style="color:#c700ff">315(个人所得税)</span></p>
+<p>14035(个人资产) = 7385(实发工资) + <span style="color:red">2300(个人五险一金)</span> + <span style="color:#ff7000">4350(公司五险一金)</span></p>
+</blockquote>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>各阶段月薪情况</h2>
+<img src="./assets/Salary/1.jpg" alt="">
+<blockquote>
+<p>7385(实发工资) = <span style="color:#4387fd">10000(应发工资)</span> － <span style="color:red">2300(个人五险一金)</span> － <span style="color:#c700ff">315(个人所得税)</span></p>
+<p>14350(公司总支出) = <span style="color:#4387fd">10000(应发工资)</span> + <span style="color:#ff7000">4350(公司五险一金)</span></p>
+</blockquote>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>结论</h2>
+<ul>
+<li>工资较低的时候，到手工资比例主要受五险一金影响</li>
+<li>随着工资的升高，五险一金保持不变，到手比例主要受超额累进税率的影响</li>
+<li>工资趋于无穷大，到手工资比例将无限接近55%，因为工资个税最高边际税率为45%</li>
+<li>如果公司减少<strong>公司五险一金</strong>支出，那么亏本的是个人</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>参考资料</h2>
+<ul>
+<li><a href="https://www.zhihu.com/question/30139332" target="_blank">算上交税、五险一金，真正到手的工资大概占比多少？</a></li>
+<li><a href="http://www.gerensuodeshui.cn/" target="_blank">个人所得税计算方法</a></li>
+</ul>
+
+</article></section></slide>
+        
+
+        <!-- <slide class="slide logoslide dark nobackground">
+            <article class="flexbox vcenter">
+                <h2 style="color: white;">Powered By nodeppt v1.4.5</h2>
+            </article>
+        </slide> -->
+        <div class="slideTip" id="tip"></div>
+    </slides>
+</div>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<div id="_buttons">
+    <div class="_btn-box" id="_btn-box" style="display:none;">
+        <button class="fa fa-arrow-circle-left" id="_btn-prev"></button>
+        <button class="fa fa-arrow-circle-right" id="_btn-next"></button>
+        <button class="fa fa-paint-brush" id="_btn-brush"></button>
+        <button class="fa fa-compress" id="_btn-overview" data-toggle="fa fa-expand"></button>
+    </div>
+    <button class="fa fa-bars" id="_btn-bar"  data-toggle="fa fa-close"></button>
+</div>
+<script src="./js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+    var ASSET_RELATIVE_DIR = ".";
+</script>
+<script>
+var base = location.protocol + '//' + location.host;
+
+var path = (location.pathname + '#').split('/').filter(function(v){
+    return !!v;
+});
+path.pop();
+path = path.join('/');
+if (typeof ASSET_RELATIVE_DIR === 'string') {
+    path = path + '/' + ASSET_RELATIVE_DIR;
+}
+MixJS.config({
+    baseURL: [ base, path, 'js'].join('/')+'/'
+});
+
+</script>
+<script src="./js/mixjs/lib/event/broadcast.js"></script>
+<script src="./js/nodeppt.js"></script>
+<script>
+Slide.init({
+    containerID: 'container',
+    drawBoardID: 'drawBoard',
+    slideClass: '.slide',
+    buildClass: '.build',
+    progressID: 'progress',
+    transition: 'slide2',
+    width: 1100,
+    dir: './',
+    
+    //打开下面的注释就开启postMessage方式
+    //访问网址127.0.0.1:8080/ppt/demo#client
+    control:{
+        type: 'postMessage',
+        args:{
+            isControl:  false
+        }
+    },
+    
+    tipID: 'tip'
+});
+MixJS.loadJS('highlight/highlight.pack.js',function(){
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
+});
+</script>
+
+
+<!--placeholder-->
+</body>
+</html>
