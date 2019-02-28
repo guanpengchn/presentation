@@ -15,25 +15,32 @@
 - [golang调用python](https://guanpengchn.github.io/presentation/golang-python.html)
 - [Blochbench Introduction](https://guanpengchn.github.io/presentation/Blockbench.html)
 - [工资与五险一金计算](https://guanpengchn.github.io/presentation/Salary-calc.html)
+- [GitHub和Git工作流](https://guanpengchn.github.io/presentation/Git-flow.html)
 
 ***
 
 ## 本地运行
 
 ```
-$ npm install -g noteppt
-$ npm install
+$ yarn global add nodeppt
+$ yarn install
 // 启动运行
-$ npm run dev
+$ yarn dev
 // 调试刷新
-$ npm run watch
+$ yarn watch
 ```
 
 ## 生成部署
 
 ```
-$ npm run deploy
+$ yarn deploy
 ```
+
+## 导出pdf
+
+在url后加入?print=1
+
+右键`打印`，选择布局`横向`，更多设置`边距->无`
 
 ## 其他
 
