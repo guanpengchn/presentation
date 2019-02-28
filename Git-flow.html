@@ -1,0 +1,200 @@
+<!--
+    Powered By nodeppt - This is probably the best web presentation tool so far!
+    version: 1.4.5
+    site: https://github.com/ksky521/nodeppt
+    date: 
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Git和Git工作流 - By 关鹏</title>
+    <link rel="stylesheet" media="all" href="./css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="./css/phone.css">
+    
+    <link rel="stylesheet" href="./js/highlight/styles/monokai_sublime.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./assets/light.css">
+<link rel="stylesheet" href="./css/theme.light.css">
+</head>
+<body>
+<div class="slides">
+    <slides id="container">
+        <slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>GitHub和Git工作流</h1>
+<h2>关鹏</h2>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>目录</h2>
+<ul>
+<li>Git简介</li>
+<li>GitHub简介</li>
+<li>Git工作流</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>Git简介</h1>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>Git本地指令——基础</h3>
+<pre><code class="shell">$ git init // 初始化仓库
+$ git status // 查看仓库的状态
+$ git add [dir/file] // 向暂存区中添加文件
+$ git commit // 保存仓库的历史记录
+$ git log // 查看提交日志
+$ git diff // 查看更改前后的差别
+$ git reset [id] // 回溯历史版本
+</code></pre>
+<img src="http://dl2.iteye.com/upload/attachment/0109/0178/291c4dc9-f58f-351e-a39f-fb070f211b32.png" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>Git本地指令——分支</h3>
+<p><a href="http://git-school.github.io/visualizing-git/" target="_blank">演示工具</a></p>
+<pre><code class="shell">$ git branch [name] // 显示、创建分支一览表
+
+$ git checkout [name] // 切换分支
+
+$ git merge [name] // 合并分支
+</code></pre>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>Git远程指令</h3>
+<p><a href="http://git-school.github.io/visualizing-git/" target="_blank">演示工具</a></p>
+<pre><code class="shell">$ git clone [url] // 获取远程仓库
+
+$ git remote add [key] [value] // 添加远程仓库
+
+$ git push [key] [local]:[remote] // 推送至远程仓库
+
+$ git pull [key] [remote]:[local] // 获取最新的远程仓库分支
+</code></pre>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>GitHub简介</h1>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>界面和功能</h3>
+<ul>
+<li>个人界面：<a href="https://github.com/ruanyf" target="_blank">阮一峰</a></li>
+<li>项目界面：<a href="https://github.com/ant-design/ant-design" target="_blank">ant-design</a><ul>
+<li>Code</li>
+<li>Issue: <a href="https://github.com/ant-design/ant-design/blob/master/README-zh_CN.md" target="_blank">《提问的智慧》</a>、<a href="https://github.com/seajs/seajs/issues/545" target="_blank">《如何向开源社区提问题》</a>、<a href="https://www.chiark.greenend.org.uk/~sgtatham/bugs-cn.html" target="_blank">《如何有效地报告 Bug》</a>、<a href="https://zhuanlan.zhihu.com/p/25795393" target="_blank">《如何向开源项目提交无法解答的问题》</a></li>
+<li>Pull requests</li>
+<li>Wiki</li>
+</ul>
+</li>
+<li>Insights<ul>
+<li>Star, Watch, Fork</li>
+</ul>
+</li>
+<li>内容：<a href="https://gist.github.com/PurpleBooth/109311bb0361f32d87a2#project-title" target="_blank">README.md</a>、<a href="http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html" target="_blank">开源协议</a>、lint（规范代码格式）、单元测试、持续集成部署</li>
+<li>其他功能：<ul>
+<li>GitHub Page（静态网页）</li>
+<li>GitHub API（通过REST API使用GitHub）</li>
+<li>GitHub Action（持续集成部署）</li>
+<li>GitHub Gist（代码片段）</li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>Git工作流</h1>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>Git Flow —— 以发布为中心的开发模式</h3>
+<img src="https://upload-images.jianshu.io/upload_images/2062729-b22e35babaac5210.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/914/format/webp" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>Git Flow —— 以发布为中心的开发模式</h3>
+<p><a href="https://github.com/guanpengchn" target="_blank">演示链接</a></p>
+<ul>
+<li>feature、fix等<a href="http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html" target="_blank">commit规范</a></li>
+<li>review提高代码质量</li>
+</ul>
+
+</article></section></slide>
+        
+
+        <!-- <slide class="slide logoslide dark nobackground">
+            <article class="flexbox vcenter">
+                <h2 style="color: white;">Powered By nodeppt v1.4.5</h2>
+            </article>
+        </slide> -->
+        <div class="slideTip" id="tip"></div>
+    </slides>
+</div>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<div id="_buttons">
+    <div class="_btn-box" id="_btn-box" style="display:none;">
+        <button class="fa fa-arrow-circle-left" id="_btn-prev"></button>
+        <button class="fa fa-arrow-circle-right" id="_btn-next"></button>
+        <button class="fa fa-paint-brush" id="_btn-brush"></button>
+        <button class="fa fa-compress" id="_btn-overview" data-toggle="fa fa-expand"></button>
+    </div>
+    <button class="fa fa-bars" id="_btn-bar"  data-toggle="fa fa-close"></button>
+</div>
+<script src="./js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+    var ASSET_RELATIVE_DIR = ".";
+</script>
+<script>
+var base = location.protocol + '//' + location.host;
+
+var path = (location.pathname + '#').split('/').filter(function(v){
+    return !!v;
+});
+path.pop();
+path = path.join('/');
+if (typeof ASSET_RELATIVE_DIR === 'string') {
+    path = path + '/' + ASSET_RELATIVE_DIR;
+}
+MixJS.config({
+    baseURL: [ base, path, 'js'].join('/')+'/'
+});
+
+</script>
+<script src="./js/mixjs/lib/event/broadcast.js"></script>
+<script src="./js/nodeppt.js"></script>
+<script>
+Slide.init({
+    containerID: 'container',
+    drawBoardID: 'drawBoard',
+    slideClass: '.slide',
+    buildClass: '.build',
+    progressID: 'progress',
+    transition: 'slide2',
+    width: 1100,
+    dir: './',
+    
+    //打开下面的注释就开启postMessage方式
+    //访问网址127.0.0.1:8080/ppt/demo#client
+    control:{
+        type: 'postMessage',
+        args:{
+            isControl:  false
+        }
+    },
+    
+    tipID: 'tip'
+});
+MixJS.loadJS('highlight/highlight.pack.js',function(){
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
+});
+</script>
+
+
+<!--placeholder-->
+</body>
+</html>

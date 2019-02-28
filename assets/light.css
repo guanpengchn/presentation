@@ -52,7 +52,27 @@ slides>slide .slide-wrapper blockquote{
 }
 a{
     vertical-align: top;
+    color: #3E87CF !important;
+}
+a:hover{
+    color: #3E87CF !important;
+}
+a:before{
+    background: #3E87CF !important;
 }
 slides>slide .slide-wrapper b, slides>slide .slide-wrapper strong{
     margin: 0;
+}
+h3 {
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.current{
+	padding: 0px;
+}
+.slide-wrapper{
+	max-width: 1200px !important;
+}
+iframe{
+    height: 700px !important;
 }

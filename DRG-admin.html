@@ -1,0 +1,203 @@
+<!--
+    Powered By nodeppt - This is probably the best web presentation tool so far!
+    version: 1.4.5
+    site: https://github.com/ksky521/nodeppt
+    date: 
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CNDRGs后台管理系统调研 - By 关鹏</title>
+    <link rel="stylesheet" media="all" href="./css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="./css/phone.css">
+    
+    <link rel="stylesheet" href="./js/highlight/styles/monokai_sublime.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./assets/light.css">
+<link rel="stylesheet" href="./css/theme.light.css">
+</head>
+<body>
+<div class="slides">
+    <slides id="container">
+        <slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>CNDRGs后台管理系统调研</h1>
+<h2>关鹏</h2>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>目录</h2>
+<ul>
+<li>系统目标</li>
+<li>原型演示</li>
+<li>技术选型</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>系统目标</h1>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>系统目标</h2>
+<ol>
+<li>信息管理</li>
+<li>界面管理</li>
+<li>服务管理</li>
+<li>任务管理</li>
+</ol>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>系统目标</h2>
+<h3>信息管理</h3>
+<ul>
+<li>用户管理：查看、修改用户信息和角色</li>
+<li>角色管理：查看全部角色和角色权限</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>系统目标</h2>
+<h3>界面管理</h3>
+<ul>
+<li>路由管理：修改路由权限</li>
+<li>菜单管理：修改菜单权限</li>
+<li>公共管理：替换Logo，登录注册页背景图，修改或添加区县、医院名称</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>系统目标</h2>
+<h3>系统管理</h3>
+<ul>
+<li>数据字典：数据库表信息</li>
+<li>数据库：多种数据库连接等信息配置</li>
+<li>系统日志：用户界面操作和数据库服务日志</li>
+<li>系统监控：CPU，内存等基本状态</li>
+<li>API查看：查看系统内部API</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>系统目标</h2>
+<h3>任务管理</h3>
+<ul>
+<li>定时任务：查看定时任务信息</li>
+<li>任务日志：查看定时任务日志</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>原型演示</h1>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<p><a href="http://111.230.157.133/inde" target="_blank">原型演示</a></p>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>技术选型</h1>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>技术选型</h2>
+<p><a href="https://panjiachen.github.io/vue-element-admin" target="_blank">vue-element-admin</a></p>
+<ul>
+<li>视图渲染库 Vue.js</li>
+<li>状态管理库 Vuex</li>
+<li>路由库 Vue Router</li>
+<li>组件库 Element</li>
+<li>HTTP请求库 axios</li>
+<li>数据模拟库 Mock.js</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>技术选型</h2>
+<p><a href="https://preview.pro.ant.design/" target="_blank">ant design</a></p>
+<ul>
+<li>视图渲染库 React</li>
+<li>状态管理库 Redux</li>
+<li>路由库 React Router</li>
+<li>组件库 Ant Design</li>
+<li>HTTP请求库 axios</li>
+<li>数据模拟库 Mock.js</li>
+</ul>
+
+</article></section></slide>
+        
+
+        <!-- <slide class="slide logoslide dark nobackground">
+            <article class="flexbox vcenter">
+                <h2 style="color: white;">Powered By nodeppt v1.4.5</h2>
+            </article>
+        </slide> -->
+        <div class="slideTip" id="tip"></div>
+    </slides>
+</div>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<div id="_buttons">
+    <div class="_btn-box" id="_btn-box" style="display:none;">
+        <button class="fa fa-arrow-circle-left" id="_btn-prev"></button>
+        <button class="fa fa-arrow-circle-right" id="_btn-next"></button>
+        <button class="fa fa-paint-brush" id="_btn-brush"></button>
+        <button class="fa fa-compress" id="_btn-overview" data-toggle="fa fa-expand"></button>
+    </div>
+    <button class="fa fa-bars" id="_btn-bar"  data-toggle="fa fa-close"></button>
+</div>
+<script src="./js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+    var ASSET_RELATIVE_DIR = ".";
+</script>
+<script>
+var base = location.protocol + '//' + location.host;
+
+var path = (location.pathname + '#').split('/').filter(function(v){
+    return !!v;
+});
+path.pop();
+path = path.join('/');
+if (typeof ASSET_RELATIVE_DIR === 'string') {
+    path = path + '/' + ASSET_RELATIVE_DIR;
+}
+MixJS.config({
+    baseURL: [ base, path, 'js'].join('/')+'/'
+});
+
+</script>
+<script src="./js/mixjs/lib/event/broadcast.js"></script>
+<script src="./js/nodeppt.js"></script>
+<script>
+Slide.init({
+    containerID: 'container',
+    drawBoardID: 'drawBoard',
+    slideClass: '.slide',
+    buildClass: '.build',
+    progressID: 'progress',
+    transition: 'slide2',
+    width: 1100,
+    dir: './',
+    
+    //打开下面的注释就开启postMessage方式
+    //访问网址127.0.0.1:8080/ppt/demo#client
+    control:{
+        type: 'postMessage',
+        args:{
+            isControl:  false
+        }
+    },
+    
+    tipID: 'tip'
+});
+MixJS.loadJS('highlight/highlight.pack.js',function(){
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
+});
+</script>
+
+
+<!--placeholder-->
+</body>
+</html>
