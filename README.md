@@ -16,6 +16,8 @@
 - [Blochbench Introduction](https://guanpengchn.github.io/presentation/Blockbench.html)
 - [工资与五险一金计算](https://guanpengchn.github.io/presentation/Salary-calc.html)
 - [GitHub和Git工作流](https://guanpengchn.github.io/presentation/Git-flow.html)
+- [你是《未来世界的幸存者》么？](https://guanpengchn.github.io/presentation/Survivor.html)
+- [计算机词汇如何发音？](https://guanpengchn.github.io/presentation/Pronunciation.html)
 
 ***
 

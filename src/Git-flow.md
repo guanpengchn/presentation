@@ -108,3 +108,9 @@ $ git pull [key] [remote]:[local] // 获取最新的远程仓库分支
 
 - feature、fix等[commit规范](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
 - review提高代码质量
+
+[slide]
+
+### 参考资料
+
+[GitHub入门与实践](https://github.com/guanpengchn/awesome-books/raw/master/%E5%85%B6%E4%BB%96/GitHub%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E8%B7%B5.pdf)
