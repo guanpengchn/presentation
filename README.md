@@ -6,7 +6,7 @@
 
 ## 在线预览
 
-**[题目列表](https://guanpengchn.github.io/presentation/)**
+**[题目列表](https://guanpengchn.github.io/#/presentation)**
 
 ***
 
@@ -37,6 +37,8 @@ $ yarn watch
 ```
 $ yarn deploy
 ```
+
+默认会部署到GitHub远程仓库的gh-pages分支上，请通过`https://username.github.io/reponame`来访问
 
 ## 导出pdf
 
