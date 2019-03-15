@@ -25,6 +25,8 @@ headFiles: /assets/light.css
 
 **.net**
 
+微软开发工具
+
 dot net [dɒtnet]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/dot-net.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -32,6 +34,8 @@ dot net [dɒtnet]
 [slide]
 
 **admin**
+
+超级管理员
 
 ['ædmɪn]
 
@@ -41,6 +45,8 @@ dot net [dɒtnet]
 
 **adobe**
 
+Photoshop等软件的制作公司
+
 [ə'dəʊbɪ; ə'dəʊb]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/adobe.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -48,6 +54,8 @@ dot net [dɒtnet]
 [slide]
 
 **amazon**
+
+亚马逊
 
 ['æməzən]
 
@@ -57,6 +65,8 @@ dot net [dɒtnet]
 
 **AirBnB**
 
+爱彼迎
+
 [eə bi: en bi:]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/AirBnB.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -64,6 +74,8 @@ dot net [dɒtnet]
 [slide]
 
 **android**
+
+安卓操作系统
 
 ['ændrɒid]
 
@@ -73,6 +85,8 @@ dot net [dɒtnet]
 
 **Apache**
 
+全球有名的软件基金会
+
 [ə'pætʃɪ]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/Apache.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -80,6 +94,8 @@ dot net [dɒtnet]
 [slide]
 
 **array**
+
+数组
 
 [ə'rei]
 
@@ -89,6 +105,8 @@ dot net [dɒtnet]
 
 **cache**
 
+通常指快速缓存
+
 [kæʃ]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/cache.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -96,6 +114,8 @@ dot net [dɒtnet]
 [slide]
 
 **cURL**
+
+命令行下工作的文件传输工具
 
 [kɜːl]
 
@@ -105,6 +125,8 @@ dot net [dɒtnet]
 
 **fedora**
 
+Linux的一个发行版，由Red hat维护
+
 [fɪ'dɔːrə]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/fedora.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -112,6 +134,8 @@ dot net [dɒtnet]
 [slide]
 
 **FIFO**
+
+First Input First Output的缩写，先入先出队列
 
 ['faɪfəʊ]
 
@@ -121,6 +145,8 @@ dot net [dɒtnet]
 
 **Git**
 
+分布式版本控制系统
+
 [ɡɪt]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/Git.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -128,6 +154,8 @@ dot net [dɒtnet]
 [slide]
 
 **GUI**
+
+图形用户界面
 
 [ˈɡui]
 
@@ -137,6 +165,8 @@ dot net [dɒtnet]
 
 **Hadoop**
 
+由Apache基金会所开发的分布式系统基础架构。
+
 [ˈhʌduːp]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/Hadoop.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -144,6 +174,8 @@ dot net [dɒtnet]
 [slide]
 
 **IEEE**
+
+电气和电子工程师协会
 
 [aɪ trɪpl i:]
 
@@ -153,6 +185,8 @@ dot net [dɒtnet]
 
 **IntelliJ**
 
+综合的Java编程环境
+
 [ɪntelɪ dʒeɪ]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/IntelliJ.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -160,6 +194,8 @@ dot net [dɒtnet]
 [slide]
 
 **image**
+
+图片
 
 ['ɪmɪdʒ]
 
@@ -169,6 +205,8 @@ dot net [dɒtnet]
 
 **implement**
 
+在java程序中 一个类实现接口类时用的关键词
+
 ['ɪmplɪm(ə)nt]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/implement.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -176,6 +214,8 @@ dot net [dɒtnet]
 [slide]
 
 **iPhone**
+
+苹果手机
 
 ['aɪfon]
 
@@ -185,6 +225,8 @@ dot net [dɒtnet]
 
 **Java**
 
+一门面向对象编程语言
+
 ['dʒɑːvə]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/Java.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -192,6 +234,8 @@ dot net [dɒtnet]
 [slide]
 
 **jpg(jpeg)**
+
+一种图像格式
 
 ['dʒeɪpeɡ]
 
@@ -201,6 +245,8 @@ dot net [dɒtnet]
 
 **JSON**
 
+一种轻量级的数据交换格式
+
 [ˈdʒeɪsən]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/JSON-0.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -208,6 +254,8 @@ dot net [dɒtnet]
 [slide]
 
 **lambda**
+
+编程中的一种函数表达式
 
 ['læmdə]
 
@@ -217,6 +265,8 @@ dot net [dɒtnet]
 
 **LaTeX**
 
+一种基于ΤΕΧ的排版系统
+
 [ˈleɪtɛk]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/LaTeX-1.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -224,6 +274,8 @@ dot net [dɒtnet]
 [slide]
 
 **Linux**
+
+一套免费使用和自由传播的类Unix操作系统
 
 ['lɪnəks]
 
@@ -233,6 +285,8 @@ dot net [dɒtnet]
 
 **main**
 
+主函数
+
 [meɪn]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/main.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -241,6 +295,8 @@ dot net [dɒtnet]
 
 **maven**
 
+管理Java项目的构建，报告和文档的项目管理工具软件
+
 ['meɪvn]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/maven.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -248,6 +304,8 @@ dot net [dɒtnet]
 [slide]
 
 **MySQL**
+
+一个关系型数据库管理系统
 
 [maɪ ˈsiːkwəl]
 
@@ -262,6 +320,8 @@ dot net [dɒtnet]
 
 **nginx**
 
+一个高性能的HTTP和反向代理服务
+
 Engine-X ['endʒɪn eks]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/nginx.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -269,6 +329,8 @@ Engine-X ['endʒɪn eks]
 [slide]
 
 **null**
+
+空指针
 
 [nʌl]
 
@@ -278,6 +340,8 @@ Engine-X ['endʒɪn eks]
 
 **NVIDIA**
 
+一家人工智能计算公司
+
 [en'vɪdɪr]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/NVIDIA.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -285,6 +349,8 @@ Engine-X ['endʒɪn eks]
 [slide]
 
 **parameter**
+
+参数
 
 [pə'ræmɪtə]
 
@@ -294,6 +360,8 @@ Engine-X ['endʒɪn eks]
 
 **python**
 
+一种计算机程序设计语言
+
 ['paɪθɑn]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/python.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -301,6 +369,8 @@ Engine-X ['endʒɪn eks]
 [slide]
 
 **Qt**
+
+跨平台C++图形用户界面应用程序开发框架
 
 [kjuːt]
 
@@ -310,6 +380,8 @@ Engine-X ['endʒɪn eks]
 
 **Samsung**
 
+三星集团是韩国最大的企业集团
+
 ['sæmsɔ:ŋ]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/Samsung.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -318,6 +390,8 @@ Engine-X ['endʒɪn eks]
 
 **Safari**
 
+苹果公司研发的网络浏览器
+
 [sə'fɑrɪ]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/Safari.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -325,6 +399,8 @@ Engine-X ['endʒɪn eks]
 [slide]
 
 **sudo**
+
+linux系统管理指令
 
 [ˈsuːduː]
 
@@ -338,6 +414,8 @@ Engine-X ['endʒɪn eks]
 
 **Ubuntu**
 
+一个以桌面应用为主的开源GNU/Linux操作系统
+
 [ʊ'bʊntʊ]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/Ubuntu.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -346,6 +424,8 @@ Engine-X ['endʒɪn eks]
 
 **YouTube**
 
+一个视频网站
+
 ['juː'tjuːb]
 
 <audio src="https://guanpengchn.github.io/awesome-pronunciation/audio/YouTube.mp3" controls="controls" controlslist="nodownload"></audio>
@@ -353,6 +433,8 @@ Engine-X ['endʒɪn eks]
 [slide]
 
 **YAML**
+
+“YAML不是一种标记语言”的外语缩写，YAML Ain't Markup Language
 
 [ˈjæməl]
 
