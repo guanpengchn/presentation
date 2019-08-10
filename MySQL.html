@@ -1,0 +1,466 @@
+<!--
+    Powered By nodeppt - This is probably the best web presentation tool so far!
+    version: 1.4.5
+    site: https://github.com/ksky521/nodeppt
+    date: 
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MySQL存储引擎与索引 - By 关鹏</title>
+    <link rel="stylesheet" media="all" href="./css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="./css/phone.css">
+    
+    <link rel="stylesheet" href="./js/highlight/styles/monokai_sublime.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./assets/light.css">
+<link rel="stylesheet" href="./css/theme.light.css">
+</head>
+<body>
+<div class="slides">
+    <slides id="container">
+        <slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>MySQL存储引擎与索引</h1>
+<p>数据库性能优化重点</p>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><hgroup>
+<h2>目录</h2>
+
+</hgroup><article>
+
+<ul>
+<li>存储引擎分类和比较</li>
+<li>索引分类</li>
+<li>MyISAM索引结构</li>
+<li>InnoDB索引结构</li>
+<li>性能优化注意点</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>存储引擎分类和比较</h2>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>存储引擎分类</h3>
+<p>1、InnoDB存储引擎<br>
+2、MyISAM存储引擎<br>
+建表时在ENGINE处设置</p>
+<pre><code class="sql">CREATE TABLE user (
+    id INT,
+) ENGINE = InnoDB;
+</code></pre>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>存储引擎比较</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">InnoDB</th>
+<th style="text-align:center">MyISAM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>支持事务</strong></td>
+<td style="text-align:center">支持</td>
+<td style="text-align:center">不支持</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>全文索引</strong></td>
+<td style="text-align:center">不支持</td>
+<td style="text-align:center">支持</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>外键</strong></td>
+<td style="text-align:center">支持</td>
+<td style="text-align:center">不支持</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>锁级别</strong></td>
+<td style="text-align:center">行级锁</td>
+<td style="text-align:center">表级锁</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>索引结构</strong></td>
+<td style="text-align:center">聚集索引</td>
+<td style="text-align:center">非聚集索引</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>数据恢复</strong></td>
+<td style="text-align:center">容易</td>
+<td style="text-align:center">困难</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>适用场景</strong></td>
+<td style="text-align:center">读写均衡</td>
+<td style="text-align:center">读取频繁</td>
+</tr>
+</tbody>
+</table>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>支持事务</h3>
+<ul>
+<li>InnoDB自动添加事务</li>
+<li>MyISAM不支持事务</li>
+</ul>
+<pre><code class="sql">BEGIN;
+  SELECT * FROM student;
+  INSERT INTO student value(1);
+COMMIT;
+</code></pre>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>全文索引</h3>
+<ul>
+<li>类似搜索引擎，对文章进行索引</li>
+<li>MyISAM支持，InnoDB不支持</li>
+<li>关键词：FULLTEXT INDEX</li>
+</ul>
+<pre><code class="sql">CREATE TABLE student (
+    id INT,
+    introduce TEXT,
+    FULLTEXT INDEX fulltextIDX(introduce)
+) ENGINE=MyISAM;
+</code></pre>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>外键</h3>
+<ul>
+<li>A表中的主键M，B表中作为一个属性出现，M为B的外键</li>
+<li>MyISAM不支持，InnoDB支持</li>
+</ul>
+<pre><code class="sql">CREATE TABLE student (
+    id INT,
+) ENGINE=InnoDB;
+
+CREATE TABLE school (
+    id INT,
+    uid INT
+) ENGINE=InnoDB;
+
+ALTER TABLE `school` FOREIGN KEY (`uid`) REFERENCES `student`(`id`);
+</code></pre>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>锁级别</h3>
+<ul>
+<li>MyISAM到表锁</li>
+<li>InnoDB到行锁，有更细致的事务隔离级别</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>索引结构</h3>
+<ul>
+<li>MyISAM非聚集索引，B+树结构，叶子节点为地址</li>
+<li>InnoDB聚集索引，B+树结构，叶子节点为数据</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>索引分类</h2>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>按功能进行索引分类</h3>
+<ul>
+<li><strong>主索引/主键索引/一级索引</strong>：使用主键，建表后自动生成，无法修改，如无主键则MySQL会内置一列主键</li>
+<li><strong>辅助索引/非主索引</strong>：人为添加的除主索引外的其他索引
+<br/>
+<br/></li>
+<li><strong>唯一索引</strong>：列的值唯一，插入数据时会进行检查，<strong>一个表中可以有多个唯一索引</strong></li>
+<li><strong>外键索引</strong>：如果表中存在外键，则会自动在该表中加入外键索引</li>
+<li><strong>全文索引</strong>：类似搜索引擎，可以做<strong>LIKE %word%</strong>的模糊匹配，只有MyISAM支持</li>
+<li><strong>复合索引/混合索引/连接索引</strong>：本质是多列索引，其中列的顺序非常重要
+<br/>
+<br/></li>
+<li><strong>单列索引</strong>：是个统称。上述的主码索引、唯一键索引、外键索引、聚集主码、聚集索引、主索引等等，除了多列索引和聚合索引其他都属于单列索引。</li>
+<li><strong>普通索引</strong>：不是主索引、唯一索引等的索引。</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>按结构进行索引分类</h3>
+<ul>
+<li>聚集索引：叶子节点为数据</li>
+<li>非聚集索引：叶子节点为地址</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>MyISAM索引结构</h2>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>MyISAM索引简介</h3>
+<ul>
+<li>MyISAM为非聚集索引</li>
+<li>主索引：默认为主键，建表后自动生成，无法修改</li>
+<li>辅助索引：人为添加</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>MyISAM主索引结构图</h3>
+<p>默认为主键，建表后自动生成</p>
+<img src="./assets/MySQL/1.png" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>MyISAM辅助索引结构图</h3>
+<p>人为添加，同样指向数据</p>
+<img src="./assets/MySQL/2.png" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>InnoDB索引结构</h2>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>InnoDB索引简介</h3>
+<ul>
+<li>InnoDB为聚集索引</li>
+<li>主索引：默认为主键，建表后自动生成</li>
+<li>辅助索引：人为添加，<strong>指向主索引</strong></li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>InnoDB主索引结构图</h3>
+<p>默认为主键，建表后自动生成</p>
+<img src="./assets/MySQL/3.png" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>InnoDB辅助索引结构图</h3>
+<p>人为添加，<strong>指向主索引</strong></p>
+<img src="./assets/MySQL/4.png" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>InnoDB不建议使用过长字段主键</h3>
+<p>所有辅助索引都使用了主索引，过长的主索引会令<strong>辅助索引文件变得过大</strong></p>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>InnoDB建议使用递增字段作为主键</h3>
+<p>非递增字段会导致 B+ Tree 在插入新纪录时频繁的分裂调整，降低效率</p>
+<pre><code class="sql">CREATE TABLE student (
+    id INT PRIMARY KEY AUTO_INCREMENT
+) ENGINE=MyISAM;
+</code></pre>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>索引结构图比较</h3>
+<img src="./assets/MySQL/5.png" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>性能优化注意点</h2>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>尽量使用主键进行查询</h3>
+<p>主索引能够极大提高效率</p>
+<pre><code class="sql">CREATE TABLE student (
+    id INT PRIMARY KEY AUTO_INCREMENT
+) ENGINE=MyISAM;
+
+SELECT * FROM student WHERE id &gt; 5;
+</code></pre>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>对于经常查询但非主键字段，要建立辅助索引</h3>
+<p>主索引 &gt; 辅助索引 &gt; 无索引</p>
+<pre><code class="sql">CREATE TABLE student (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR,
+    age INT,
+    INDEX(name)
+) ENGINE=MyISAM;
+
+SELECT * FROM student WHERE name = `zhangsan`;
+</code></pre>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>避免全表扫描</h3>
+<p>表中存在 null 会导致全表扫描</p>
+<pre><code class="sql">SELECT id FROM student WHERE name is null;
+
+//可以考虑用0代替null
+</code></pre>
+<p>查询语句存在 != 或 &lt;&gt; 操作符，会导致全表扫描</p>
+<pre><code class="sql">SELECT id FROM student WHERE name != `zhangsan`;
+</code></pre>
+<p>左模糊查询会导致全表扫描</p>
+<pre><code class="sql">SELECT id FROM student WHERE name like `%abc`; //会
+
+SELECT id FROM student WHERE name like `abc%`; //不会
+</code></pre>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>不要用*返回所有列</h3>
+<p>数据量大时，会出现问题，用哪列则查哪列</p>
+<pre><code class="sql">SELECT * FROM student;
+</code></pre>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>当只要一行数据时使用 LIMIT 1</h3>
+<p>MySQL数据库引擎会在找到一条数据后停止搜索，而不是继续往后查少下一条符合记录的数据</p>
+<pre><code class="sql">SELECT id FROM student WHERE name LIKE `abc%` LIMIT 1;
+</code></pre>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>索引并非越多越好</h3>
+<ul>
+<li>索引可以提高 select 的效率，但也降低了 insert 及 update 的效率</li>
+<li>因为需要重建索引，同时占用磁盘空间</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>尽量使用数字型字段</h3>
+<ul>
+<li>若只含数值信息的字段尽量不要设计为字符型</li>
+<li>会降低查询和连接的性能，并会增加存储开销。</li>
+</ul>
+<pre><code class="sql">// ip地址的存储
+mysql&gt; SELECT inet_aton(&#39;255.255.255.255&#39;);
++------------------------------+
+| inet_aton(&#39;255.255.255.255&#39;) |
++------------------------------+
+|                   4294967295 |
++------------------------------+
+1 row in set (0.00 sec)
+</code></pre>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>多用EXPLAIN SELECT跟踪查询效果</h3>
+<ul>
+<li>使用 EXPLAIN 关键字可以让你知道 MySQL 是如何处理你的 SQL 语句的</li>
+<li>其中 type 字段能够告诉你是否为全表扫描</li>
+</ul>
+<pre><code class="sql">mysql&gt; EXPLAIN SELECT * FROM student WHERE id = 2;
+*************************** 1. row ***************************
+           id: 1
+  select_type: SIMPLE
+        table: student
+   partitions: NULL
+         type: const
+possible_keys: PRIMARY
+          key: PRIMARY
+      key_len: 8
+          ref: const
+         rows: 1
+     filtered: 100.00
+        Extra: NULL
+1 row in set, 1 warning (0.00 sec)
+</code></pre>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://segmentfault.com/a/1190000008131735" target="_blank">MySQL 性能优化神器 Explain 使用分析</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/48385127" target="_blank">这大概是最全的sql优化方案了</a></li>
+<li><a href="http://www.qttc.net/201208193.html" target="_blank">MySQL中应该怎样存储IP地址</a></li>
+<li><a href="https://www.cnblogs.com/xiangyangzhu/p/index.html" target="_blank">索引分类</a></li>
+<li><a href="http://www.cnblogs.com/renzherushe/p/4780226.html" target="_blank">MySQL的MyISAM与InnoDB的索引方式</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483670&amp;idx=1&amp;sn=751d84d0ce50d64934d636014abe2023&amp;chksm=979688e4a0e101f2a51d1f06ec75e25c56f8936321ae43badc2fe9fc1257b4dc1c24223699de&amp;scene=21#wechat_redirect" target="_blank">InnoDB记录存储结构</a></li>
+<li><a href="https://mp.weixin.qq.com/s/9gloKNtZrYlGsBODCckQrw" target="_blank">MySQL的索引</a></li>
+<li><a href="https://mp.weixin.qq.com/s/ktEBA03Kip4bYYkp2ktiIQ" target="_blank">MySQL的索引（中）</a></li>
+</ul>
+
+</article></section></slide>
+        
+
+        <!-- <slide class="slide logoslide dark nobackground">
+            <article class="flexbox vcenter">
+                <h2 style="color: white;">Powered By nodeppt v1.4.5</h2>
+            </article>
+        </slide> -->
+        <div class="slideTip" id="tip"></div>
+    </slides>
+</div>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<div id="_buttons">
+    <div class="_btn-box" id="_btn-box" style="display:none;">
+        <button class="fa fa-arrow-circle-left" id="_btn-prev"></button>
+        <button class="fa fa-arrow-circle-right" id="_btn-next"></button>
+        <button class="fa fa-paint-brush" id="_btn-brush"></button>
+        <button class="fa fa-compress" id="_btn-overview" data-toggle="fa fa-expand"></button>
+    </div>
+    <button class="fa fa-bars" id="_btn-bar"  data-toggle="fa fa-close"></button>
+</div>
+<script src="./js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+    var ASSET_RELATIVE_DIR = ".";
+</script>
+<script>
+var base = location.protocol + '//' + location.host;
+
+var path = (location.pathname + '#').split('/').filter(function(v){
+    return !!v;
+});
+path.pop();
+path = path.join('/');
+if (typeof ASSET_RELATIVE_DIR === 'string') {
+    path = path + '/' + ASSET_RELATIVE_DIR;
+}
+MixJS.config({
+    baseURL: [ base, path, 'js'].join('/')+'/'
+});
+
+</script>
+<script src="./js/mixjs/lib/event/broadcast.js"></script>
+<script src="./js/nodeppt.js"></script>
+<script>
+Slide.init({
+    containerID: 'container',
+    drawBoardID: 'drawBoard',
+    slideClass: '.slide',
+    buildClass: '.build',
+    progressID: 'progress',
+    transition: 'slide2',
+    width: 1100,
+    dir: './',
+    
+    //打开下面的注释就开启postMessage方式
+    //访问网址127.0.0.1:8080/ppt/demo#client
+    control:{
+        type: 'postMessage',
+        args:{
+            isControl:  false
+        }
+    },
+    
+    tipID: 'tip'
+});
+MixJS.loadJS('highlight/highlight.pack.js',function(){
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
+});
+</script>
+
+
+<!--placeholder-->
+</body>
+</html>
